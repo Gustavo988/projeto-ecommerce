@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma G2W</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fffbe6;
+        }
+        header {
+            background-color: #ffdd00;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .search-bar {
+            display: flex;
+        }
+        .search-bar input {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            padding: 0.5rem 1rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .hero {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .hero-content {
+            max-width: 50%;
+        }
+        .hero-image {
+            width: 40%;
+            height: auto;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+        .featured-courses, .course-catalog {
+            padding: 2rem;
+        }
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .course-card {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 1rem;
+            background-color: white;
+        }
+        .course-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar...">
+            <button>Buscar</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Bem-vindo a nossa Plataforma G2W</h1>
+                <p>Aprenda novas habilidades e avance em sua carreira com nossa ampla variedade de cursos online</p>
+                <a href="Cursos.html" class="cta-button">Navegar pelos cursos</a>
+            </div>
+            <img src='images/Logo_G2W_upscaled 1.svg' alt="Ilustração de aprendizagem online" class="hero-image">
+        </section>
+
+        <section class="featured-courses">
+            <h2>Cursos em Destaque</h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <img src="images/image1.png" alt="Benchmarking em Sustentabilidade" class="course-image">
+                    <h3>Benchmarking em Sustentabilidade</h3>
+                    <p>Totalmente satisfeito! O benchmarking superou nossas expectativas e trouxe ótimos resultados.</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="course-card">
+                    <img src="images/image2.png" alt="Benchmarking em Operações" class="course-image">
+                    <h3>Benchmarking em Operações</h3>
+                    <p>Totalmente satisfeito! O benchmarking superou nossas expectativas e trouxe ótimos resultados.</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="course-card">
+                    <img src="images/image3.png" alt="Benchmarking em Inovação" class="course-image">
+                    <h3>Benchmarking em Inovação</h3>
+                    <p>Totalmente satisfeito! O benchmarking superou nossas expectativas e trouxe ótimos resultados.</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-catalog">
+            <h2>Catálogo de Cursos</h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <img src="images/image4.png" alt="Benchmarking Competitivo" class="course-image">
+                    <h3>Benchmarking Competitivo</h3>
+                    <div class="rating">⭐⭐⭐⭐</div>
+                    <p>Preço: $4,000.00</p>
+                </div>
+                <div class="course-card">
+                    <img src="images/image5.png" alt="Benchmarking em Marketing" class="course-image">
+                    <h3>Benchmarking em Marketing</h3>
+                    <div class="rating">⭐⭐⭐⭐</div>
+                    <p>Preço: $3,500.00</p>
+                </div>
+                <div class="course-card">
+                    <img src="images/image6.png" alt="Benchmarking Financeiro" class="course-image">
+                    <h3>Benchmarking Financeiro</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p>Preço: $2,000.00</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Sua Empresa. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Basic JavaScript for search functionality
+        document.querySelector('.search-bar button').addEventListener('click', function() {
+            const searchTerm = document.querySelector('.search-bar input').value;
+            alert('Você pesquisou por: ' + searchTerm);
+        });
+
+        // Add to cart functionality
+        const addToCartButtons = document.querySelectorAll('.cta-button');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const courseName = this.closest('.course-card').querySelector('h3').textContent;
+                alert('Curso adicionado ao carrinho: ' + courseName);
+            });
+        });
+    </script>
+</body>
+</html>
