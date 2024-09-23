@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benchmarking - Curso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fffbe6;
+        }
+        header {
+            background-color: #ffdd00;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .search-container {
+            display: flex;
+        }
+        #search-input {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-right: none;
+        }
+        #search-button {
+            padding: 5px 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+        .enroll-button {
+            background-color: #e0e0e0;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .course-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .course-info > div {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .image-box {
+            width: 30%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #fff5cc;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .footer-links {
+            margin-top: 10px;
+        }
+        .footer-links a {
+            margin: 0 10px;
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Pesquisar">
+            <button id="search-button">Search</button>
+        </div>
+    </header>
+
+    <main>
+        <h1>Benchmarking</h1>
+        <h2>Revisão dos Cursos</h2>
+        <button  class="enroll-button">Inscreva-se agora</button>
+
+        <h3>Descrição do Curso</h3>
+        <p>Curso de Benchmarking: Avalie e compare o desempenho da sua empresa com líderes do setor para identificar melhores práticas e impulsionar melhorias. Inclui análise de concorrência, definição de métricas e estratégias para superar a competição.</p>
+
+        <div class="course-info">
+            <div>
+                <h3>Currículo</h3>
+                <ul>
+                    <li>Lição 1: Introdução</li>
+                    <li>Lição 2: recebendo conhecimento</li>
+                    <li>Lição 3: Realização das POC</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Pré-requisitos do curso</h3>
+                <ul>
+                    <li>1-) Conhecimento básico em ADM</li>
+                    <li>2-) Habiliade de pesquisa</li>
+                    <li>3-) Conhecimento de Processos de Negócio</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Duração dos Cursos</h3>
+                <p>48 horas - 2 semanas</p>
+            </div>
+            <div>
+                <h3>Habilidades adiquiridas</h3>
+                <ul>
+                    <li>1-) Análise Comparativa</li>
+                    <li>2-) Definição de Métricas e KPIs</li>
+                    <li>3-) Gestão de Projetos de Benchmarking</li>
+                    <li>4-) Conhecimento sobre Técnicas de Benchmarking</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Nível do curso</h3>
+        <p>Avançado</p>
+
+        <h3>Linguagem do Curso</h3>
+        <p>Português - Com suporte em legendas</p>
+
+        <div class="image-container">
+            <div class="image-box">
+                <img src="images/image3.png" alt="Imagem do curso 1">
+                <h4>Relatório do Curso</h4>
+                <p>Legenda do curso</p>
+            </div>
+            <div class="image-box">
+                <img src="images/image5.png" alt="Imagem do curso 2">
+                <h4>Relatório do Curso</h4>
+                <p>Legenda do curso</p>
+            </div>
+            <div class="image-box">
+                <img src="images/image1.png" alt="Imagem do curso 3">
+                <h4>Relatório do Curso</h4>
+                <p>Legenda do curso</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2022 Plataforma de e-learning. Todos os direitos reservado</p>
+        <div class="footer-links">
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Refund Policy</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('search-button').addEventListener('click', function() {
+            var searchQuery = document.getElementById('search-input').value;
+            alert('Pesquisando por: ' + searchQuery);
+        });
+    </script>
+</body>
+</html>

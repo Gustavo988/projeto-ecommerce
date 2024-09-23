@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5e8d0;
+            color: #333;
+        }
+        header {
+            background-color: #ffd700;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            margin-top: 0;
+        }
+        .cart-summary, .payment-info, .order-confirmation {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .cart-item img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .cart-item-details {
+            flex-grow: 1;
+        }
+        .cart-item-actions {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .btn-remove {
+            background-color: #ff4d4d;
+            color: white;
+            margin-bottom: 5px;
+        }
+        .btn-edit {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .btn-save, .btn-confirm {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .btn-remove:hover, .btn-edit:hover, .btn-save:hover, .btn-confirm:hover {
+            opacity: 0.8;
+        }
+        .summary-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .checkbox-container input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+        <a href="HomePage.html" style="color: black; text-decoration: none;">Voltar</a>
+    </header>
+    
+    <main>
+        <section class="cart-summary">
+            <h2>Resumo de carrinho</h2>
+            <div class="cart-item">
+                <img src="images/image6.png" alt="Benchmarking em Operações">
+                <div class="cart-item-details">
+                    <h3>Benchmarking em Operações</h3>
+                    <p>Preço: R$ 6.000,00</p>
+                </div>
+                <div class="cart-item-actions">
+                    <button class="btn-remove" onclick="removeItem()">remover</button>
+                    <button class="btn-edit" onclick="editQuantity()">Editar quantidade</button>
+                </div>
+            </div>
+            <div class="summary-box">
+                <h3>Sumário</h3>
+                <p>Subtotal: R$ 6.000,00</p>
+                <p>Taxa: R$ 60,00</p>
+                <p><strong>Total: R$ 6.060,00</strong></p>
+            </div>
+        </section>
+        
+        <section class="payment-info">
+            <h2>Informações de pagamento</h2>
+            <form id="payment-form">
+                <input type="text" placeholder="Primeiro Nome" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Número de Telefone" required>
+                <textarea placeholder="Endereço" required></textarea>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="same-address">
+                    <label for="same-address">Use o mesmo endereço para envio</label>
+                </div>
+                <button type="button" class="btn-save" onclick="saveAndContinue()">Salve e prossiga</button>
+            </form>
+        </section>
+        
+        <section class="payment-info">
+            <h2>Informações do pagamento</h2>
+            <form id="card-form">
+                <input type="text" placeholder="Número do cartão" required>
+                <input type="text" placeholder="Data de expiração" required>
+                <input type="text" placeholder="CVV" required>
+                <input type="text" placeholder="Nome do titular" required>
+                <button type="button" class="btn-save" onclick="saveAndContinue()">Salve e prossiga</button>
+            </form>
+        </section>
+        
+        <section class="order-confirmation">
+            <h2>Confirmação do pedido</h2>
+            <div class="cart-item">
+                <img src="images/image6.png" alt="Benchmarking em Operações">
+                <div class="cart-item-details">
+                    <h3>Benchmarking em Operações</h3>
+                    <p>Preço: R$ 6.000,00</p>
+                </div>
+            </div>
+            <div class="summary-box">
+                <h3>Informações do pagamento</h3>
+                <p>Primeiro nome: <span id="confirm-name"></span></p>
+                <p>Email: <span id="confirm-email"></span></p>
+                <p>Número de telefone: <span id="confirm-phone"></span></p>
+                <p>Endereço: <span id="confirm-address"></span></p>
+            </div>
+            <div class="summary-box">
+                <h3>Informações do pagamento</h3>
+                <p>Número do Cartão: <span id="confirm-card"></span></p>
+                <p>Data de validade: <span id="confirm-expiry"></span></p>
+                <p>CVV: <span id="confirm-cvv"></span></p>
+                <p>Nome do titular: <span id="confirm-cardholder"></span></p>
+            </div>
+            <button class="btn-confirm" onclick="confirmOrder()">Confirmar o Pedido</button>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Sua Empresa. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function removeItem() {
+            alert('Item removido do carrinho');
+        }
+        
+        function editQuantity() {
+            alert('Editar quantidade');
+        }
+        
+        function saveAndContinue() {
+            alert('Informações salvas');
+        }
+        
+        function confirmOrder() {
+            alert('Pedido confirmado');
+        }
+        
+        // You can add more JavaScript here for form validation and dynamic content updating
+    </script>
+</body>
+</html>

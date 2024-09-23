@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprenda a qualquer hora, Em qualquer lugar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5e8d0;
+        }
+        header {
+            background-color: #ffd700;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: bold;
+        }
+        .search-bar {
+            display: flex;
+        }
+        .search-bar input {
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+        .search-bar button {
+            padding: 5px 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        main {
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .cta-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .course-section {
+            margin-top: 40px;
+        }
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .course-card {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+        }
+        .course-card img {
+            max-width: 100%;
+            height: auto;
+        }
+        .testimonials {
+            margin-top: 40px;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .testimonial-card {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+        }
+        .testimonial-card img {
+            max-width: 100px;
+            height: auto;
+        }
+        .view-all {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <div class="search-bar">
+            <input type="text" placeholder="Como desastamos ajudar?">
+            <button>Buscar</button>
+        </div>
+    </header>
+    
+    <main>
+        <h1>Aprenda a qualquer hora,<br>Em qualquer lugar</h1>
+        <p style="text-align: center;">Aprenda novas habilidades com nossos cursos online</p>
+        <a href="curso.html" class="cta-button">Comece</a>
+        
+        <section class="course-section">
+            <h2>Principais cursos e orçamentos</h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <img src="images/image3.png" alt="Marketing">
+                    <h3>Benchmarking em Marketing</h3>
+                    <a href="#">Saiba mais</a>
+                </div>
+                <div class="course-card">
+                    <img src="images/image5.png" alt="Inovação">
+                    <h3>Benchmarking e Inovação</h3>
+                    <a href="#">Saiba mais</a>
+                </div>
+                <div class="course-card">
+                    <img src="images/image6.png" alt="Competitivo">
+                    <h3>Benchmarking Competitivo</h3>
+                    <a href="#">Saiba mais</a>
+                </div>
+            </div>
+            <a href="#" class="view-all">Ver todos os cursos</a>
+        </section>
+        
+        <section class="course-section">
+            <h2>Destaques de cursos populares</h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <img src="images/image4.png" alt="Operações">
+                    <h3>Benchmarking em Operações</h3>
+                    <a href="#">Saiba mais</a>
+                </div>
+                <div class="course-card">
+                    <img src="/placeholder.svg?height=150&width=150" alt="Sustentabilidade">
+                    <h3>Benchmarking e Sustentabilidade</h3>
+                    <a href="#">Saiba mais</a>
+                </div>
+                <div class="course-card">
+                    <img src="/placeholder.svg?height=150&width=150" alt="Financeiro">
+                    <h3>Benchmarking Financeiro</h3>
+                    <a href="#">Saiba mais</a>
+                </div>
+            </div>
+            <a href="#" class="view-all">Ver todos os cursos populares</a>
+        </section>
+        
+        <section class="testimonials">
+            <h2>Depoimentos de clientes</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <img src="/placeholder.svg?height=100&width=100" alt="Ajinomoto">
+                    <h3>AJINOMOTO DO BRASIL</h3>
+                    <p>"Depoimento do cliente aqui"</p>
+                    <a href="#">Leia mais</a>
+                </div>
+                <div class="testimonial-card">
+                    <img src="/placeholder.svg?height=100&width=100" alt="Coca Cola">
+                    <h3>COCA COLA</h3>
+                    <p>"Depoimento do cliente aqui"</p>
+                    <a href="#">Leia mais</a>
+                </div>
+                <div class="testimonial-card">
+                    <img src="/placeholder.svg?height=100&width=100" alt="Fini">
+                    <h3>FINI</h3>
+                    <p>"Depoimento do cliente aqui"</p>
+                    <a href="#">Leia mais</a>
+                </div>
+            </div>
+            <a href="#" class="view-all">Ver todos os depoimentos</a>
+        </section>
+    </main>
+    
+    <footer style="text-align: center; margin-top: 40px; padding: 20px; background-color: #f0f0f0;">
+        <p>&copy; 2023 Sua Site. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // You can add JavaScript here for any interactive features
+        // For example, handling the search functionality or dynamic content loading
+    </script>
+</body>
+</html>
